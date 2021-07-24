@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+}
+@keyframes Myanimation1 {
+    from {
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes Myanimation2 {
+    from {
+        transform: translate(20vw , -100%);
+    }
+    to {
+        transform: translate(20vw, 98px);
+    }
+}
+
+@keyframes Myanimation3 {
+    from {
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes Myanimation4 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes Myanimation5 {
+    from {
+        transform: translate(0, -100%);
+    }
+    to {
+        transform: translate(0, 10vh);
+    }
+}
+
+
+.menu{
+    position: fixed;
+    border-bottom: solid #31a9b8 2px;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background: white;
+    animation: Myanimation1 0.5s;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px black;
+    color: #31a9b8;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.help{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    color: #31a9b8;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: Myanimation1 1.5s;
+    text-shadow: 2px 2px 3px black;
+    letter-spacing: 2px;
+    display: none;
+}
+.fa-clock{
+    animation: Myanimation4 2s;
+}
+#clockStorage{
+    position: relative;
+    margin: 0 0 0 60px;
+}
+#clock{
+    position: absolute;
+    left: -62px;
+}
+
+.bar{
+    margin-left: 5%;
+    transition: 0.5s;
+
+}
+.bar:hover{
+    cursor: pointer;
+    color: #666666;
+}
+.plus{
+    margin-right: 5%;
+    transition: 0.5s;
+}
+.plus:hover{
+    cursor: pointer;
+    color: #666666;
+}
+#dropMenuID{
+    position: fixed;
+    will-change: transform;
+    transform: translate(0, 10vh);
+    width: 15%;
+    background: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: #31a9b8 solid 3px;
+    border-left: #31a9b8 solid 2px;
+    border-right: #31a9b8 solid 2px;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #666666;
+    z-index: 2;
+    font-weight: bolder;
+    display: none;
+    overflow: hidden;
+    animation: Myanimation5 0.3s;
+
+}
+
+.dropMenu div{
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent solid 2px;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+.dropMenu div:hover{
+    padding: 10px;
+    border: #31a9b8 solid 2px;
+    background: #31a9b8;
+    color: white;
+    cursor: pointer;
+}
+
+#themeWrapID{
+    background-color: #fafafa;
+    animation: Myanimation1 0.5s;
+    display: none;
+}
+.themeContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+.themeNameWrap{
+    text-align: center;
+    padding-top: 11vh;
+    padding-bottom: 4vh;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px black;
+    color: #444444;
+    font-family: sans-serif;
+    text-transform: capitalize;
+
+}
+.themeNameWrap span{
+    animation: Myanimation1 0.8s;
+}
+
+.blockContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 75vh;
+}
+.leftBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+.done{
+    width: 75%;
+    height: 75%;
+    border: #258039 solid 2px;
+    border-radius: 20px;
+    background: white;
+    position: relative;
+    overflow: auto;
+
+}
+.bin{
+    width: 75%;
+    height: 15%;
+    border: #cf3721 solid 2px;
+    border-radius: 20px;
+    background: white;
+    transition: 0.5s;
+}
+.bin:hover {
+    background: #cf3721;
+    cursor: pointer;
+}
+.bin:hover .bigCross{
+    color: white;
+}
+.rightBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.shortTerm{
+    width: 75%;
+    height: 45%;
+    border: #31a9b8 solid 2px;
+    border-radius: 20px;
+    background: white;
+    overflow: auto;
+
+}
+.longTerm{
+    width: 75%;
+    height: 30%;
+    border: #f5be41 solid 2px;
+    border-radius: 20px;
+    background: white;
+    overflow: auto;
+
+}
+.money{
+    width: 75%;
+    height: 15%;
+    border: #444444 solid 2px;
+    border-radius: 20px;
+    background: white;
+    color: #444444;
+    font-size: 28px;
+    text-align: center;
+}
+.money #moneyDisplay {
+    display: inline-block;
+    margin-top: 2%;
+    animation: Myanimation1 0.8s;
+}
+.money span .fa-dollar-sign{
+    color: #258039;
+}
+
+.headerMini{
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    padding-top: 5px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    justify-content: space-around;
+}
+.headerShort{
+    background: #31a9b8;
+    color: white;
+}
+.headerLong{
+    background: #f5be41;
+    color: white;
+}
+.headerDone{
+    background: #258039;
+    color: white;
+}
+.headerMoney{
+    background: #444444;
+    color: white;
+}
+.headerBin{
+    background: #cf3721;
+    color: white;
+}
+.bigCross{
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    color: #cf3721;
+    text-shadow: black 1px 1px 1px;
+    margin-top: 1%;
+}
+.dollarSignIcon{
+    position: absolute;
+    right: 10px;
+    color: #258039;
+}
+
+.plusMini{
+    transition: 0.5s;
+}
+.plusMini:hover{
+    cursor: pointer;
+    color: #666666;
+}
+
+.toDoItem{
+    margin-left: 30px;
+}
+
+
+.fa-reply{
+    transform: rotate(125deg);
+}
+
+.validationHint{
+    text-align: center;
+    color: #666666;
+    text-shadow: black 1px 1px 1px;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-top: 10px;
+
+}
+.menuContainer{
+    width: 100%;
+    height: 100%;
+    background: #444444;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 4;
+    animation: Myanimation3 0.8s;
+    display: none;
+
+}
+.menuSelect{
+    width: 60vw;
+    min-height: 60%;
+    border-radius: 20px;
+    border: solid #31a9b8 2px ;
+    will-change: transform;
+    transform: translate(20vw, 98px);
+    background: white;
+    position: fixed;
+    z-index: 5;
+    animation: Myanimation2 0.8s;
+    display: none;
+}
+.menuSelect label{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px black;
+    color: #31a9b8;
+    margin-top: 20px;
+}
+
+
+.menuSelect input{
+    border: #31a9b8 solid 2px;
+    border-radius: 50px;
+    display: block;
+    margin: 1vh auto 0 auto;
+    width: 30vw;
+    height: 8vh;
+    overflow: hidden;
+    appearance: none;
+    padding: 10px 4%;
+    font-size: 24px;
+    color: #666666;
+    background-color: #ffffff;
+    font-weight: 400;
+
+}
+
+.menuSelect #themeNameID{
+    border: #31a9b8 solid 2px;
+    border-radius: 50px;
+    display: block;
+    margin: 10vh auto 130px auto;
+    width: 30vw;
+    height: 8vh;
+    overflow: hidden;
+    appearance: none;
+    padding: 10px 4%;
+    font-size: 24px;
+    color: #666666;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+#shortTermMoneyID{
+    margin-bottom: 130px;
+}
+#longTermMoneyID{
+    margin-bottom: 130px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+.btn{
+    color: #666666;
+    width: 150px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 14px 4%;
+    line-height: 1.7em;
+    background-color: transparent;
+    border: 3px solid #31a9b8 ;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: #31a9b8;
+    color: white;
+    cursor: pointer;
+
+}
+
+.taskContainer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    border: transparent solid 2px;
+    padding: 3px 0 3px 0;
+    background: white;
+    z-index: 2;
+    animation: Myanimation1 0.8s;
+    position: relative;
+    height: 30px;
+}
+
+.longTaskWrap .taskContainer:hover{
+    border: #f5be41 solid 2px ;
+    cursor: pointer;
+}
+
+.longTaskWrap .taskContainer:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #f5be41;
+    top: 9px;
+    left: 7px;
+    transition: 0.8s;
+}
+
+.longTaskWrap:hover .taskContainer:before{
+    content: "";
+    position: absolute;
+    transform: scale(1.5);
+    border-radius: 50%;
+    background: #f5be41;
+
+}
+
+.shortTaskWrap .taskContainer:hover{
+    border: #31a9b8 solid 2px ;
+    cursor: pointer;
+}
+
+.shortTaskWrap .taskContainer:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #31a9b8;
+    top: 9px;
+    left: 7px;
+    transition: 0.8s;
+}
+
+.shortTaskWrap:hover .taskContainer:before{
+    content: "";
+    position: absolute;
+    transform: scale(1.5);
+    border-radius: 50%;
+    background: #31a9b8;
+
+}
+
+
+.doneTaskWrap .taskContainer:hover{
+    border: #258039 solid 2px ;
+    cursor: pointer;
+}
+
+.doneTaskWrap .taskContainer:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    background: transparent;
+    border-right: #258039 solid 4px;
+    border-bottom: #258039 solid 4px;
+    transform: rotate(45deg);
+    top: 4px;
+    left: 8px;
+    transition: 0.8s;
+}
+
+
+.doneTaskWrap:hover .taskContainer:before{
+    content: "";
+    position: absolute;
+    transform: scale(1.3) rotate(45deg);
+
+}
+
+
+.taskContainer span:nth-child(1){
+    margin-left: 25px;
+    color: #444444;
+}
+.taskContainer span:nth-child(2){
+    margin-right: 25px;
+    color: #444444;
+
+
+}
+.planManipulationMenu{
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    border: transparent solid 1px;
+    padding: 3px 0 3px 0;
+    background: white;
+    display: none;
+    animation: Myanimation1 0.5s;
+    transform: translateZ(0);
+}
+.doneStyle {
+    color: #666666;
+    width: 50%;
+    border: #258039 solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    margin: 0 5px 0 5px;
+}
+.doneStyle i {
+    color: #258039;
+}
+.doneStyle:hover{
+    background: #258039;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+.deleteStyle {
+    color: #666666;
+    width: 50%;
+    border: #cf3721 solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    margin: 0 5px 0 5px;
+
+}
+.deleteStyle i {
+    color: #cf3721;
+}
+.deleteStyle:hover{
+    background: #cf3721;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+
+.planDeleteApproveHeader{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black;
+    color: #666666;
+    margin: 50px 0 0 0;
+}
+
+
+
+
+
