@@ -1,3 +1,5 @@
+https://livaq.github.io/Project_2_Organiser/
+
 My second game project "Organiser".
 
 On webpage you can create Themes, add plans (and their cost if required), add your savings.
