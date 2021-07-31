@@ -13,3 +13,4 @@ Things to improve:
 4. SPA anchors.
 5. More customisation options.
 6. More interaction with keyboard ( esc and enter binding).
+7. Expand validation.
